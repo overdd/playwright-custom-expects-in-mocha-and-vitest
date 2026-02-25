@@ -1,0 +1,26 @@
+{
+  "name": "playwright-custom-expects-in-mocha-and-vitest",
+  "version": "0.1.0",
+  "author": "https://github.com/overdd",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": { 
+    "test:pw": "playwright test",
+    "test:mocha": "tsx ./node_modules/mocha/bin/mocha.js \"tests/mocha/**/*.spec.ts\"",
+    "test:vitest": "vitest run tests/vitest",
+    "test": "(npm run test:pw || true) && (npm run test:mocha || true) && (npm run test:vitest || true)"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.30",
+    "mocha": "^10.3.0",
+    "playwright": "^1.49.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.5.4",
+    "vitest": "^1.6.0"
+  }
+}
